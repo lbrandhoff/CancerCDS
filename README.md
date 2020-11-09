@@ -20,11 +20,11 @@ It requires a local installation of the Variant Effect Predictor Tool (release 9
 
 
 ## Run
-First, download the classifiers (link) and to put them into the `./CancerCDS/classifiers` directory.\
+First, [download](https://download.imgag.de/ahbranl1/rfc_classifiers.zip "Download Random Forest Classifiers") the classifiers and to put them into the `./CancerCDS/classifiers` directory.\
 Then, run the run_project.py file, required inputs are the following:
-* *-i*    input VCf file
+* *-i*    input VCF file
 * *-o*    output directory
-* *-c*    cancer t
+* *-c*    cancer type
 acronym (optional), a list of available cancer types can be found in `supported_cTypes.txt`
 * *-p* minimum decision probability of each variant in output of being cancer driving (min 0.5)
 * *-r* path to GrCH37 reference genome
@@ -36,5 +36,6 @@ acronym (optional), a list of available cancer types can be found in `supported_
 ## Output
 
 If a viable input cancer type is given, the tool will analyse the input file with the respective type-specific and pan-cancer classifier.
-If no cancer type is given, onyl the pan-cancer classification is performed.\
-Output files can be found in the supplied output directory. Each file contains different information for each sufficient driver mutation, namely HGVSg notation, affected gene symbol, decision probability of being cancer driving and treatment recommendations.
+If no cancer type is given, only the pan-cancer classification is performed.
+
+Output files can be found in the supplied output directory. Each file contains different information for each sufficient driver mutation (namely: HGVSg notation, affected gene symbol, decision probability of being cancer driving, treatment recommendations).
