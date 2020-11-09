@@ -26,7 +26,6 @@ gene_col = "SYMBOL"  # input
 prot_col = "HGVSp"
 
 # parse dbs
-#intogen_main = "/mnt/users/ahbranl1/intogen/"
 intogen_main = os.path.join(os.path.dirname(__file__))+"/data/"
 gene_driver_path = intogen_main + "driver_genes.tsv"
 var_af_path = intogen_main + "gene_var_pseudoAF_perCtype_v2.tsv"

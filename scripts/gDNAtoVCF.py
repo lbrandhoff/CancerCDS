@@ -137,7 +137,7 @@ for line in input_file:
                 ref = queryRange(start_refpos, pos)  # aGT (GT dup) -> ref: GT
                 alt = ref[-1] + ref  # alt: TGT
                 ref = ref[-1]  # ref: T
-                #print("dup", chromosome, pos, start_refpos, alt, line)
+
 
             else:
                 print("UNCONVERTABLE 'dup' LINE, skipping;", line)
@@ -169,7 +169,6 @@ for line in input_file:
         ref = queryRange(pos, end_refpos)
         alt = ref[0] + split[-1]
 
-        #  print("delins", chromosome, pos, ref, alt, line)  # check
 
     # del only lines - ins & delins already catched
     elif re.search("del[^ins]*", line):
@@ -192,7 +191,7 @@ for line in input_file:
 
                 ref = queryRange(pos, end_refpos)
                 alt = ref[0]
-                # print(pos, end_refpos, ref, alt, line)
+
 
             # multiple bases deleted
             elif len(split) == 4:

@@ -24,10 +24,10 @@ temp_dir=${out_dir}  # dir to store temp files in
 
 mkdir -p ${temp_dir}  # makes tempdir if not present
 
-#echo "Sorting .vcf"
-#/mnt/share/opt/ngs-bits-current/VcfSort -in ${vcf_in} -out ${temp_dir}trash_me.vcf  # sort
-#echo "Running VEP annotation"
-#python3 $run_vep_py -i ${temp_dir}trash_me.vcf -o ${temp_dir}annotated_trash_me.vcf -t 5 -b 1000
+echo "Sorting .vcf"
+/mnt/share/opt/ngs-bits-current/VcfSort -in ${vcf_in} -out ${temp_dir}trash_me.vcf  # sort
+echo "Running VEP annotation"
+python3 $run_vep_py -i ${temp_dir}trash_me.vcf -o ${temp_dir}annotated_trash_me.vcf -t 5 -b 1000
 echo "Converting .vcf to .tsv file"
 python3 $vcf2tsv_py -i ${temp_dir}annotated_trash_me.vcf -o ${temp_dir}vep.tsv
 echo "Extracting protein and genome notations"

@@ -24,7 +24,6 @@ gene_col = "SYMBOL"  # input
 infile = pd.DataFrame(infile[gene_col])  # only consider symbol column, as DF for merging
 
 
-#gene_list_path = "/mnt/users/ahbranl1/pharmGKB/dgidb_pharmGKB_genes_new.tsv"  # parse precomputed genelist
 gene_list_path = os.path.join(os.path.dirname(__file__))+"/data/drug_gene_interactions.tsv"
 gene_list_file = pd.read_csv(gene_list_path, delimiter="\t")
 

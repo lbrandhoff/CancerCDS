@@ -18,7 +18,7 @@ paste ${temp_dir}vep_gdna.tsv ${temp_dir}reformat_vep.tsv ${temp_dir}intogen.tsv
 
 echo "Removing temporary data"
 rm ${temp_dir}/trash_me.vcf
-#rm ${temp_dir}/annotated_trash_me.vcf
+rm ${temp_dir}/annotated_trash_me.vcf
 rm ${temp_dir}/vep_gdna.tsv
 rm ${temp_dir}/vep_prot.tsv
 rm ${temp_dir}/vep.tsv

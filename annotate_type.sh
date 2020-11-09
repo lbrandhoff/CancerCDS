@@ -47,16 +47,6 @@ echo "Combining data"
 paste ${temp_dir}vep_gdna.tsv ${temp_dir}reformat_vep.tsv ${temp_dir}intogen.tsv ${temp_dir}hotspot.tsv ${temp_dir}gene_drug.tsv ${temp_dir}vep_prot.tsv > ${temp_dir}type_annotation.tsv
 
 
-#echo "Removing temporary data"
-
-#rm ${temp_dir}/gDNA_vep.txt
-#rm ${temp_dir}/trash_me.vcf
-#rm ${temp_dir}/rdy_gDNA.txt
-#rm ${temp_dir}/annotated_trash_me.vcf
-#rm ${temp_dir}/vep.tsv
-#rm ${temp_dir}/final_vep.tsv
-#rm ${temp_dir}/vep_gdna.tsv
-#rm ${temp_dir}/vep_prot.tsv
 echo "Finished"
 
 

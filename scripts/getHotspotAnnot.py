@@ -22,7 +22,6 @@ infile = pd.read_csv(infile_path, delimiter="\t")
 gene_col = "SYMBOL"  # input
 prot_col = "HGVSp"
 
-#hotspot_path = "/mnt/users/ahbranl1/hotspots/prepped_hotspots.txt"
 hotspot_path = os.path.join(os.path.dirname(__file__))+"/data/hotspots.txt"
 hotspot_file = pd.read_csv(hotspot_path, delimiter="\t")
 

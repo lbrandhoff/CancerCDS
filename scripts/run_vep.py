@@ -18,7 +18,7 @@ try:
     args = parse.parse_args()
 
 except:
-    exit('COSMIC_vep.py: parsing of arguments failed!')
+    exit('run_vep.py: parsing of arguments failed!')
 
 # paths to files
 input_vcf = str(args.input_file)
@@ -70,22 +70,6 @@ args.append("--plugin dbNSFP,%s,LRT_score,GERP++_RS,Polyphen2_HVAR_score,SIFT_sc
 fields = ["Consequence","PolyPhen", "SIFT", "LRT_score", "GERP++_RS",
           "gnomAD_AF", "AF", "SYMBOL", "HGVSp", "HGVSg", "CADD_phred", "Eigen-raw","MetaSVM_score","VEST3_score",
           "MetaLR_score"]
-# only NAs: (tested on SK set from COSMIC, NAs < 80%)
-# MutationTaster_score
-# MutationAssessor_score
-# FATHMM_score
-# PROVEAN_score
-# DANN_score
-# phastCons20way_mammalian
-# phastCons100way_mammalian
-# phyloP20way_vertebrate
-# phyloP100way_vertebrate
-# MCAP_score
-# REVEL_score
-# MutPred_score
-# fathmmMKL_coding_score
-# integrated_fitCons_score
-# SiPhy_29way_logOdds
 
 
 args.append("--fields " + ",".join(fields))

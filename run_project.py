@@ -127,7 +127,7 @@ if cType in classifs:
 	print()
 
 	# start annotation
-	#runBothAnnots(cType)  # produces outdir/type_annotation.tsv & outdir/pan_annotation.tsv
+	runBothAnnots(cType)  # produces outdir/type_annotation.tsv & outdir/pan_annotation.tsv
 
 	# parse annot data & prep for classification
 	type_annot = pd.read_csv(out_dir + "type_annotation.tsv", sep="\t",header=0)
